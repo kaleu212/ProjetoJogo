@@ -56,10 +56,10 @@ header button {
     font-size: 17px;
 }
 
-button {
+main button {
     padding: 15px;
     background-color: rgb(255, 166, 0);
-    border: none;
+    border-color: rgb(255, 102, 0);
     border-radius: 10px;
     cursor: pointer;
 }
@@ -83,16 +83,18 @@ main {
         display: flex;
         align-items: center;
         justify-items: center;
-        margin: auto;
-        margin-top: 25px;
-        padding: 20px 40px;
-        font-size: 20px;
+        margin: 40px auto 40px auto;
+        padding: 30px 55px;
+        font-size: 30px;
         font-weight: bold;
+    }
+    .comojogar{
+        width: 50%;
     }
 }
 
 main div {
-    width: 70%;
+    width: 60%;
     padding: 10px;
     margin: 40px auto 50px auto;
     background-color: rgb(0, 39, 112);
@@ -100,11 +102,12 @@ main div {
     h2 {
         color: white;
         text-align: center;
-
+        font-size: 50px;
     }
     p {
         color: white;
         text-align: center;
         padding: 0 40px;
     }
+    
 }
