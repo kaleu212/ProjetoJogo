@@ -11,6 +11,7 @@ self.C3_GetObjectRefTable = function () {
 		C3.Behaviors.Pin,
 		C3.Plugins.Mouse.Cnds.OnClick,
 		C3.Plugins.Keyboard.Cnds.IsKeyDown,
+		C3.Plugins.Touch.Cnds.OnTapGesture,
 		C3.Behaviors.Platform.Acts.SetVectorY,
 		C3.Plugins.Sprite.Acts.SetX,
 		C3.Plugins.Sprite.Exps.X,
