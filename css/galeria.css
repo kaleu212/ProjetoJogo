@@ -1,4 +1,4 @@
-*{
+* {
     scroll-behavior: smooth;
 }
 
@@ -56,7 +56,26 @@ header button {
     cursor: pointer;
     font-size: 17px;
 }
-.galeria{
+
+.galeria {
+    width: 70%;
+    padding: 10px;
+    margin: 40px auto 50px auto;
+    background-color: rgb(0, 39, 112);
+    border-radius: 20px;
+
+    h2 {
+        color: white;
+        text-align: center;
+        font-size: 50px;
+    }
+
+    img {
+        padding: 20px;
+    }
+}
+
+.stripes {
     width: 70%;
     padding: 10px;
     margin: 40px auto 50px auto;
@@ -67,7 +86,9 @@ header button {
         text-align: center;
         font-size: 50px;
     }
-    img{
-        padding: 20px;
+
+    img {
+        margin: auto;
+        padding: 30px 30px 30px;
     }
 }
