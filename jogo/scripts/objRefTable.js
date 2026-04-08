@@ -12,6 +12,7 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Audio,
 		C3.Plugins.Mouse.Cnds.OnClick,
 		C3.Plugins.Touch.Cnds.OnTouchStart,
+		C3.Plugins.Keyboard.Cnds.OnKey,
 		C3.Behaviors.Platform.Acts.SetVectorY,
 		C3.Plugins.Audio.Acts.Play,
 		C3.Plugins.Sprite.Acts.SetX,
