@@ -9,10 +9,12 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Keyboard,
 		C3.Plugins.Text,
 		C3.Behaviors.Pin,
+		C3.Plugins.Audio,
 		C3.Plugins.Mouse.Cnds.OnClick,
 		C3.Plugins.Keyboard.Cnds.IsKeyDown,
 		C3.Plugins.Touch.Cnds.OnTapGesture,
 		C3.Behaviors.Platform.Acts.SetVectorY,
+		C3.Plugins.Audio.Acts.Play,
 		C3.Plugins.Sprite.Acts.SetX,
 		C3.Plugins.Sprite.Exps.X,
 		C3.Plugins.System.Exps.dt,
@@ -32,7 +34,8 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Sprite.Cnds.IsOnScreen,
 		C3.Plugins.System.Cnds.TriggerOnce,
 		C3.Plugins.System.Acts.AddVar,
-		C3.Plugins.Sprite.Cnds.CompareY
+		C3.Plugins.Sprite.Cnds.CompareY,
+		C3.Plugins.System.Cnds.OnLayoutStart
 	];
 };
 self.C3_JsPropNameTable = [
@@ -48,6 +51,7 @@ self.C3_JsPropNameTable = [
 	{baconUp: 0},
 	{Fixar: 0},
 	{Texto: 0},
+	{Áudio: 0},
 	{pontos: 0}
 ];
 
@@ -60,5 +64,6 @@ self.InstanceType = {
 	Teclado: class extends self.IInstance {},
 	baconDown: class extends self.ISpriteInstance {},
 	baconUp: class extends self.ISpriteInstance {},
-	Texto: class extends self.ITextInstance {}
+	Texto: class extends self.ITextInstance {},
+	Áudio: class extends self.IInstance {}
 }
