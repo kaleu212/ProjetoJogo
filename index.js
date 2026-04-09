@@ -35,7 +35,7 @@ window.onload = function () {
         alert("Acesso negado ❌");
     }
 }
-}
+
 let temaClaro = false;
 
 function alternarTema() {
