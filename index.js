@@ -6,15 +6,6 @@ const Classificacao = 0;
 
 window.onload = function () {
 
-    // Se já visitou o site, não pergunta de novo
-    if (localStorage.getItem("usuarioJaEntrou")) {
-        liberarConteudo();
-        return;
-    }
-
-    // Primeira vez no site
-    localStorage.setItem("usuarioJaEntrou", "true");
-
     alert("Bem-vindo ao " + NomeJogo + "!");
 
     let anoAtual = new Date().getFullYear();
