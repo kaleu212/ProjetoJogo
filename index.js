@@ -6,8 +6,6 @@ const Classificacao = 0;
 
 window.onload = function () {
 
-    window.onload = function () {
-
     // Se já visitou o site, não pergunta de novo
     if (localStorage.getItem("usuarioJaEntrou")) {
         liberarConteudo();
