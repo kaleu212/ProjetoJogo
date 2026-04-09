@@ -23,7 +23,7 @@ window.onload = function () {
         alert("Acesso liberado ✅");
         liberarConteudo();
     }
-
+}
 let temaClaro = false;
 
 function alternarTema() {
