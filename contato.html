@@ -12,6 +12,31 @@
     <link rel="stylesheet" href="css/contato.css">
     <link rel="stylesheet" href="css/all.css">
     <link rel="icon" href="img/1.png">
+    <script>// verifica ao carregar a página
+        window.onload = function () {
+            let temaSalvo = localStorage.getItem("tema");
+
+            if (temaSalvo === "light") {
+                document.body.classList.add("light");
+                document.getElementById("btnTema").innerText = "🌙";
+            }
+        }
+
+        // alterna o tema
+        function alternarTema() {
+            let body = document.body;
+            let botao = document.getElementById("btnTema");
+
+            body.classList.toggle("light");
+
+            if (body.classList.contains("light")) {
+                botao.innerText = "🌙";
+                localStorage.setItem("tema", "light");
+            } else {
+                botao.innerText = "☀️";
+                localStorage.setItem("tema", "dark");
+            }
+        }</script>
 </head>
 
 <body>
@@ -40,6 +65,9 @@
                     </a>
                 </li>
                 <li>
+                    <button id="btnTema" onclick="alternarTema()">🌙</button>
+                </li>
+                <li>
                     <a href="jogo/index.html" target="_blank">
                         <button>Jogar agora</button></a>
                 </li>
@@ -48,13 +76,13 @@
     </header>
     <main>
         <h1>Contato<h1>
-            <h2>
-                Quem somos
-            </h2>
-            <p>Desenvolvido por Heithor Kaléu Borges da Silva</p>
-            <p>Telefone: (44)99892-2578</p>
-            <p>Email: heithorkaleuborges@gmail.com</p>
-        </main>
+                <h2>
+                    Quem somos
+                </h2>
+                <p>Desenvolvido por Heithor Kaléu Borges da Silva</p>
+                <p>Telefone: (44)99892-2578</p>
+                <p>Email: heithorkaleuborges@gmail.com</p>
+    </main>
 </body>
 <footer>
     <p><strong> &copy; 2026 Desenvolvido por Heithor Kaléu</strong></p>

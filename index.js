@@ -27,18 +27,28 @@ window.onload = function () {
     }
 }
 
-let temaClaro = false;
+// verifica ao carregar a página
+window.onload = function () {
+    let temaSalvo = localStorage.getItem("tema");
 
+    if (temaSalvo === "light") {
+        document.body.classList.add("light");
+        document.getElementById("btnTema").innerText = "🌙";
+    }
+}
+
+// alterna o tema
 function alternarTema() {
-    temaClaro = !temaClaro;
-
-    document.body.classList.toggle("light");
-
+    let body = document.body;
     let botao = document.getElementById("btnTema");
 
-    if (temaClaro) {
+    body.classList.toggle("light");
+
+    if (body.classList.contains("light")) {
         botao.innerText = "🌙";
+        localStorage.setItem("tema", "light");
     } else {
         botao.innerText = "☀️";
+        localStorage.setItem("tema", "dark");
     }
 }

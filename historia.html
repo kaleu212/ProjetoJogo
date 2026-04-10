@@ -12,6 +12,31 @@
     <link rel="stylesheet" href="css/historia.css">
     <link rel="stylesheet" href="css/all.css">
     <link rel="icon" href="img/1.png">
+    <script>// verifica ao carregar a página
+        window.onload = function () {
+            let temaSalvo = localStorage.getItem("tema");
+
+            if (temaSalvo === "light") {
+                document.body.classList.add("light");
+                document.getElementById("btnTema").innerText = "🌙";
+            }
+        }
+
+        // alterna o tema
+        function alternarTema() {
+            let body = document.body;
+            let botao = document.getElementById("btnTema");
+
+            body.classList.toggle("light");
+
+            if (body.classList.contains("light")) {
+                botao.innerText = "🌙";
+                localStorage.setItem("tema", "light");
+            } else {
+                botao.innerText = "☀️";
+                localStorage.setItem("tema", "dark");
+            }
+        }</script>
 </head>
 
 <body>
@@ -40,6 +65,9 @@
                     </a>
                 </li>
                 <li>
+                    <button id="btnTema" onclick="alternarTema()">🌙</button>
+                </li>
+                <li>
                     <a href="jogo/index.html" target="_blank">
                         <button>Jogar agora</button></a>
                 </li>
@@ -53,20 +81,20 @@
                 outros. Enquanto seus irmãos brincavam na lama, ele olhava para o céu… pois carregava um segredo:
                 pequenas asas.</p>
 
-                <p>Certo dia, misteriosos bacons surgiram entre as nuvens — e, sem deixar rastros, sua mãe e seus irmãos
+            <p>Certo dia, misteriosos bacons surgiram entre as nuvens — e, sem deixar rastros, sua mãe e seus irmãos
                 desapareceram. O mundo ficou vazio… mas o coração de Porcello não.</p>
 
-                <p>Sem medo, ele decide voar.</p>
+            <p>Sem medo, ele decide voar.</p>
 
-                <p>Atravessando os céus, Porcello enfrenta perigos estranhos: bacons com espinhos que flutuam,
+            <p>Atravessando os céus, Porcello enfrenta perigos estranhos: bacons com espinhos que flutuam,
                 como se guardassem um segredo sombrio. Cada desvio é um desafio, cada voo é uma esperança.</p>
 
-                <p>Ele não sabe o que vai encontrar no final…</p>
+            <p>Ele não sabe o que vai encontrar no final…</p>
 
-                <p>Mas sabe por que começou.</p>
+            <p>Mas sabe por que começou.</p>
 
-                <p>Salvar sua família.</p>
-                <img src="img/Porcello e o caminho de bacon.png" alt="historiaPorcello">
+            <p>Salvar sua família.</p>
+            <img src="img/Porcello e o caminho de bacon.png" alt="historiaPorcello">
         </div>
     </main>
 </body>

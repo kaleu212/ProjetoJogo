@@ -7,10 +7,36 @@
     <title>Voo de Porcello</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/galeria.css">
     <link rel="stylesheet" href="css/all.css">
     <link rel="icon" href="img/1.png">
+    <script>// verifica ao carregar a página
+        window.onload = function () {
+            let temaSalvo = localStorage.getItem("tema");
+
+            if (temaSalvo === "light") {
+                document.body.classList.add("light");
+                document.getElementById("btnTema").innerText = "🌙";
+            }
+        }
+
+        // alterna o tema
+        function alternarTema() {
+            let body = document.body;
+            let botao = document.getElementById("btnTema");
+
+            body.classList.toggle("light");
+
+            if (body.classList.contains("light")) {
+                botao.innerText = "🌙";
+                localStorage.setItem("tema", "light");
+            } else {
+                botao.innerText = "☀️";
+                localStorage.setItem("tema", "dark");
+            }
+        }</script>
 </head>
 
 <body>
@@ -21,7 +47,7 @@
         <nav>
             <ul>
                 <li>
-                    <a href="index.html">Home</a>   
+                    <a href="index.html">Home</a>
                 </li>
                 <li>
                     <a href="galeria.html">
@@ -37,6 +63,9 @@
                     <a href="contato.html">
                         Contato
                     </a>
+                </li>
+                <li>
+                    <button id="btnTema" onclick="alternarTema()">🌙</button>
                 </li>
                 <li>
                     <a href="jogo/index.html" target="_blank">
@@ -64,3 +93,6 @@
     <p><strong> &copy; 2026 Desenvolvido por Heithor Kaléu</strong></p>
 
 </footer>
+<script src="galeria.js"></script>
+
+</html>
