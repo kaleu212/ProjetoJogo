@@ -4,28 +4,38 @@ const Genero = "Arcade";
 const Empresa = "Kaleu Academy";
 const Classificacao = 0;
 
-window.onload = function () {
+window.addEventListener("load", function () {
 
-    alert("Bem-vindo ao " + NomeJogo + "!");
+    // verifica se já entrou antes
+    let jaVisitou = localStorage.getItem("primeiraVisita");
 
-    let anoAtual = new Date().getFullYear();
+    if (!jaVisitou) {
 
-    if (anoAtual === AnoDeLancamento) {
-        alert("🎉 Grande lançamento do jogo este ano!");
+        alert("Bem-vindo ao " + NomeJogo + "!");
+
+        let anoAtual = new Date().getFullYear();
+
+        if (anoAtual === AnoDeLancamento) {
+            alert("🎉 Grande lançamento do jogo este ano!");
+        }
+
+        let nome = prompt("Digite seu nome:");
+        alert("Olá, " + nome + "! Bem-vindo ao " + NomeJogo);
+
+        let idade = Number(prompt("Digite sua idade:"));
+
+        if (idade >= Classificacao) {
+            alert("Acesso liberado ✅");
+            liberarConteudo();
+        } else {
+            alert("Acesso negado ❌");
+        }
+
+        // marca que já entrou
+        localStorage.setItem("primeiraVisita", "true");
     }
 
-    let nome = prompt("Digite seu nome:");
-    alert("Olá, " + nome + "! Bem-vindo ao " + NomeJogo);
-
-    let idade = Number(prompt("Digite sua idade:"));
-
-    if (idade >= Classificacao) {
-        alert("Acesso liberado ✅");
-        liberarConteudo();
-    } else {
-        alert("Acesso negado ❌");
-    }
-}
+});
 
 // verifica ao carregar a página
 window.onload = function () {
