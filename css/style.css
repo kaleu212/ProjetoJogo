@@ -161,3 +161,22 @@ body.light footer {
     background-color: #000000;
     color: rgb(255, 255, 255);
 }
+
+/* REMOVE QUALQUER ESTILO PADRÃO DE LINK */
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+    color: inherit !important;
+    background: none !important;
+    text-decoration: none !important;
+}
+
+body {
+    color: rgb(255, 255, 255);
+}
+
+body.light {
+    color: rgb(255, 255, 255);
+}
