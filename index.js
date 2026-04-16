@@ -5,8 +5,6 @@ const Empresa = "Kaleu Academy";
 const Classificacao = 16;
 
 
-window.onload = function () {
-
     alert("Bem-vindo ao " + NomeJogo + "!");
 
     let anoAtual = new Date().getFullYear();
@@ -29,7 +27,7 @@ window.onload = function () {
         document.body.style.filter = "blur(10px)";
         document.body.style.pointerEvents = "none";
     }
-}
+
 
 // verifica ao carregar a página
 window.onload = function () {
