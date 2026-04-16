@@ -2,40 +2,34 @@ const NomeJogo = "O Voo de Porcello";
 const AnoDeLancamento = 2026;
 const Genero = "Arcade";
 const Empresa = "Kaleu Academy";
-const Classificacao = 0;
+const Classificacao = 16;
 
-window.addEventListener("load", function () {
 
-    // verifica se já entrou antes
-    let jaVisitou = localStorage.getItem("primeiraVisita");
+window.onload = function () {
 
-    if (!jaVisitou) {
+    alert("Bem-vindo ao " + NomeJogo + "!");
 
-        alert("Bem-vindo ao " + NomeJogo + "!");
+    let anoAtual = new Date().getFullYear();
 
-        let anoAtual = new Date().getFullYear();
-
-        if (anoAtual === AnoDeLancamento) {
-            alert("🎉 Grande lançamento do jogo este ano!");
-        }
-
-        let nome = prompt("Digite seu nome:");
-        alert("Olá, " + nome + "! Bem-vindo ao " + NomeJogo);
-
-        let idade = Number(prompt("Digite sua idade:"));
-
-        if (idade >= Classificacao) {
-            alert("Acesso liberado ✅");
-            liberarConteudo();
-        } else {
-            alert("Acesso negado ❌");
-        }
-
-        // marca que já entrou
-        localStorage.setItem("primeiraVisita", "true");
+    if (anoAtual === AnoDeLancamento) {
+        alert("🎉 Grande lançamento do jogo este ano!");
     }
 
-});
+    let nome = prompt("Digite seu nome:");
+    alert("Olá, " + nome + "! Bem-vindo ao " + NomeJogo);
+
+    let idade = Number(prompt("Digite sua idade:"));
+
+    if (idade >= Classificacao) {
+        alert("Acesso liberado ✅");
+        liberarConteudo();
+    } else {
+        alert("Acesso Negado! Conteúdo Bloqueado 🚫");
+
+        document.body.style.filter = "blur(10px)";
+        document.body.style.pointerEvents = "none";
+    }
+}
 
 // verifica ao carregar a página
 window.onload = function () {
