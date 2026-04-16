@@ -25,17 +25,14 @@ window.addEventListener("load", function () {
         let idade = Number(prompt("Digite sua idade:"));
 
 
-        document.addEventListener("DOMContentLoaded", function () {
-            if (idade >= Classificacao) {
-                alert("Acesso liberado ✅");
-            } else {
-                alert("Acesso Negado! Conteúdo Bloqueado 🚫");
+        if (idade >= Classificacao) {
+            alert("Acesso liberado ✅");
+        } else {
+            alert("Acesso Negado! Conteúdo Bloqueado 🚫");
 
-                document.body.style.filter = "blur(10px)";
-                document.body.style.pointerEvents = "none";
-            }
-        });
-
+            document.body.style.filter = "blur(10px)";
+            document.body.style.pointerEvents = "none";
+        }
 
         // marca que já entrou
         localStorage.setItem("primeiraVisita", "true");
