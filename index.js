@@ -25,7 +25,6 @@ window.addEventListener("load", function () {
 
         let idade = Number(prompt("Digite sua idade:"));
 
-
         if (idade >= Classificacao) {
             alert("Acesso liberado ✅");
         } else {
@@ -37,11 +36,10 @@ window.addEventListener("load", function () {
 
         // marca que já entrou
         localStorage.setItem("primeiraVisita", "true");
-
-
-
     }
+
 });
+
 
 // verifica tema ao carregar a página
 window.onload = function () {
