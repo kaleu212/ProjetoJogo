@@ -29,16 +29,10 @@ window.onload = function () {
         document.body.style.filter = "blur(10px)";
         document.body.style.pointerEvents = "none";
     }
-
-    // marca que já entrou
-    localStorage.setItem("primeiraVisita", "true");
-
-
-
 }
 ;
 
-// verifica ao carregar a página
+// verifica tema ao carregar a página
 window.onload = function () {
     let temaSalvo = localStorage.getItem("tema");
 
