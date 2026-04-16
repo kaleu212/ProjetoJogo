@@ -23,9 +23,6 @@ const Classificacao = 16;
         liberarConteudo();
     } else {
         alert("Acesso Negado! Conteúdo Bloqueado 🚫");
-
-        document.body.style.filter = "blur(10px)";
-        document.body.style.pointerEvents = "none";
     }
 
 
