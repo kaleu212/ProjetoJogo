@@ -26,16 +26,8 @@ window.addEventListener("load", function () {
 
         if (idade >= Classificacao) {
             alert("Acesso liberado ✅");
-            liberarConteudo();
         } else {
             alert("Acesso Negado! Conteúdo Bloqueado 🚫");
-        }
-    }
-
-    function liberarConteudo() {
-        let conteudo = document.getElementById("conteudoSensivel");
-        if (conteudo) {
-            conteudo.style.filter = "blur(0px)";
         }
     }
 
