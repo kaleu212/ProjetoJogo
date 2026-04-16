@@ -29,12 +29,6 @@ window.onload = function () {
             document.body.style.filter = "blur(10px)";
             document.body.style.pointerEvents = "none";
         }
-
-        // marca que já entrou
-        localStorage.setItem("primeiraVisita", "true");
-
-
-
     }
 ;
 
