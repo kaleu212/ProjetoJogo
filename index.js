@@ -2,7 +2,7 @@ const NomeJogo = "O Voo de Porcello";
 const AnoDeLancamento = 2026;
 const Genero = "Arcade";
 const Empresa = "Kaleu Academy";
-const Classificacao = 0;
+const Classificacao = 16;
 
 window.addEventListener("load", function () {
 
@@ -28,12 +28,19 @@ window.addEventListener("load", function () {
             alert("Acesso liberado ✅");
             liberarConteudo();
         } else {
-            alert("Acesso negado ❌");
+            alert("Acesso Negado! Conteúdo Bloqueado 🚫");
         }
-
-        // marca que já entrou
-        localStorage.setItem("primeiraVisita", "true");
     }
+
+    function liberarConteudo() {
+        let conteudo = document.getElementById("conteudoSensivel");
+        if (conteudo) {
+            conteudo.style.filter = "blur(0px)";
+        }
+    }
+
+    // marca que já entrou
+    localStorage.setItem("primeiraVisita", "true");
 
 });
 
