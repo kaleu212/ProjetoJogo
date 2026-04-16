@@ -5,20 +5,15 @@ const Empresa = "Kaleu Academy";
 const Classificacao = 16;
 
 
-window.addEventListener("load", function () {
+window.onload = function () {
 
-    // verifica se já entrou antes
-    let jaVisitou = localStorage.getItem("primeiraVisita");
+    alert("Bem-vindo ao " + NomeJogo + "!");
 
-    if (!jaVisitou) {
+    let anoAtual = new Date().getFullYear();
 
-        alert("Bem-vindo ao " + NomeJogo + "!");
-
-        let anoAtual = new Date().getFullYear();
-
-        if (anoAtual === AnoDeLancamento) {
-            alert("🎉 Grande lançamento do jogo este ano!");
-        }
+    if (anoAtual === AnoDeLancamento) {
+        alert("🎉 Grande lançamento do jogo este ano!");
+    }
 
         let nome = prompt("Digite seu nome:");
         alert("Olá, " + nome + "! Bem-vindo ao " + NomeJogo);
@@ -41,7 +36,7 @@ window.addEventListener("load", function () {
 
 
     }
-});
+;
 
 // verifica tema ao carregar a página
 window.onload = function () {
