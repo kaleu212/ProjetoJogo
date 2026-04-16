@@ -5,43 +5,33 @@ const Empresa = "Kaleu Academy";
 const Classificacao = 16;
 
 
-window.addEventListener("load", function () {
+window.onload = function () {
 
-    // verifica se já entrou antes
-    let jaVisitou = localStorage.getItem("primeiraVisita");
+    alert("Bem-vindo ao " + NomeJogo + "!");
 
-    if (!jaVisitou) {
+    let anoAtual = new Date().getFullYear();
 
-        alert("Bem-vindo ao " + NomeJogo + "!");
-
-        let anoAtual = new Date().getFullYear();
-
-        if (anoAtual === AnoDeLancamento) {
-            alert("🎉 Grande lançamento do jogo este ano!");
-        }
-
-        let nome = prompt("Digite seu nome:");
-        alert("Olá, " + nome + "! Bem-vindo ao " + NomeJogo);
-
-        let idade = Number(prompt("Digite sua idade:"));
-
-        if (idade >= Classificacao) {
-            alert("Acesso liberado ✅");
-        } else {
-            alert("Acesso Negado! Conteúdo Bloqueado 🚫");
-
-            document.body.style.filter = "blur(10px)";
-            document.body.style.pointerEvents = "none";
-        }
-
-        // marca que já entrou
-        localStorage.setItem("primeiraVisita", "true");
+    if (anoAtual === AnoDeLancamento) {
+        alert("🎉 Grande lançamento do jogo este ano!");
     }
 
-});
+    let nome = prompt("Digite seu nome:");
+    alert("Olá, " + nome + "! Bem-vindo ao " + NomeJogo);
 
+    let idade = Number(prompt("Digite sua idade:"));
 
-// verifica tema ao carregar a página
+    if (idade >= Classificacao) {
+        alert("Acesso liberado ✅");
+        liberarConteudo();
+    } else {
+        alert("Acesso Negado! Conteúdo Bloqueado 🚫");
+
+        document.body.style.filter = "blur(10px)";
+        document.body.style.pointerEvents = "none";
+    }
+}
+
+// verifica ao carregar a página
 window.onload = function () {
     let temaSalvo = localStorage.getItem("tema");
 
